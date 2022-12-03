@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class DemoController {
 
-    @GetMapping("/info")
+    @GetMapping("/")
     public String getURL(Model model) {
         model.addAttribute("info", new Info());
         return "info";
