@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+  <title>Find out information via URL</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>What we have found:</h1>
+<p th:text="'URL: ' + ${info.url}" />
+<p th:text="'content: ' + ${info.content}" />
+<a href="/info">Find out more</a>
+</body>
+</html>
