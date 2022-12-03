@@ -20,6 +20,7 @@ public class Parser {
         Elements twitter = page.select("[href*=twitter]");
         for (Element link : twitter) {
             twitter_txt += link.attr("abs:href");
+            break;
         }
         if(twitter_txt == ""){
             return "Not Found";

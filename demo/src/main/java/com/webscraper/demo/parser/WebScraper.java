@@ -26,14 +26,16 @@ public class WebScraper {
         if (matcher.find()) {
             name_company = matcher.group(1);
         }
+        JSONObject result = ParseDataBase.DataBaseParser(url);
+
+        if(result != null){
+            return result;
+        }
 
         Document doc = Jsoup.connect(url).get();
         String name = Parser.ParseTitle(doc);
 
-        JSONObject result = ParseDataBase.DataBaseParser(name);
-        if(result != null){
-            return result;
-        }
+
 
 
 
@@ -60,18 +62,23 @@ public class WebScraper {
         }
         if(employees == "Not Found"){
             String employees_pdl = Integer.toString(PDLReader.GetEmployees(domen));
-            if(employees_pdl != "-1"){employees = employees_pdl;}
+            if(employees_pdl.equals("-1")){
+                employees = "Not found";
+            }else{
+                employees = employees_pdl;
+
+            }
         }
+        if(employees.equals("-1")){employees = "Not Found";}
         if(address == "Not Found"){
             String address_pdl = PDLReader.GetAddress(domen);
             if(address_pdl != "Not Found"){address = address_pdl;}
         }
-
         parsed.put("employees", employees);
         parsed.put("address", address);
 //        String parsedStr = parsed.toString(4);
 //        System.out.println(parsedStr);
-        WriteDataBase.Write_database(name, twitter, facebook, logo, icon, employees, address);
+        WriteDataBase.Write_database(url, name, twitter, facebook, logo, icon, employees, address);
 
 
         return parsed;
