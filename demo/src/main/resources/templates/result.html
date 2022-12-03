@@ -6,8 +6,14 @@
 </head>
 <body>
 <h1>What we have found:</h1>
-<p th:text="'URL: ' + ${info.url}" />
-<p th:text="'content: ' + ${info.content}" />
+<p th:text="'URL: ' + ${info.find(info.url).name_}" />
+<p th:text="'Name: ' + ${info.name_}" />
+<p th:text="'Facebook: ' + ${info.facebook_}" />
+<p th:text="'Twitter: ' + ${info.twitter_}" />
+<p th:text="'Logo: ' + ${info.logo_}" />
+<p th:text="'Icon: ' + ${info.icon_}" />
+<p th:text="'Employees: ' + ${info.employees_}" />
+<p th:text="'Address: ' + ${info.address_}" />
 <a href="/info">Find out more</a>
 </body>
 </html>
