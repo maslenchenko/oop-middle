@@ -13,6 +13,19 @@ public class WebScraper {
 
     public static JSONObject scraper(String domen){
         try{
+            Pattern pattern_checker = Pattern.compile(".+\\..+");
+            Matcher matcher_checker = pattern_checker.matcher(domen);
+            if(!matcher_checker.find()){
+                JSONObject parsed3 = new JSONObject();
+                parsed3.put("name", "Invalid domen");
+                parsed3.put("twitter", "Invalid domen");
+                parsed3.put("facebook", "Invalid domen");
+                parsed3.put("logo", "Invalid domen");
+                parsed3.put("icon", "Invalid domen");
+                parsed3.put("employees", "Invalid domen");
+                parsed3.put("address", "Invalid domen");
+                return parsed3;
+            }
        String url = "https://" + domen;
 
 
