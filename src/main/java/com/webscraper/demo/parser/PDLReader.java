@@ -12,7 +12,7 @@ public class PDLReader {
 
     public static int GetEmployees(String domen) {
         try {
-            String API_KEY = "7dd1fcd5bbe12ddaa126cd17a6a1a1754345f2a27b07e3a8796ab34ac06ae951";
+            String API_KEY = "f4a9b7ea74da7108eee600b0e1276405ec4c5d276858306a8818723d13b8bdaa";
             String command = "SELECT NAME FROM COMPANY WHERE WEBSITE='" + domen + "'";
 //        String query = URLEncoder.encode("SELECT NAME FROM COMPANY WHERE WEBSITE='ucu.edu.ua'", StandardCharsets.UTF_8);
             String query = URLEncoder.encode(command, StandardCharsets.UTF_8);
@@ -27,13 +27,13 @@ public class PDLReader {
 //            System.out.println(jsonObject.toString(4));
             return jsonObject.getJSONArray("data").getJSONObject(0).getInt("employee_count");
         } catch (IOException e) {
-            return -1;
+            return  -1;
         }
     }
 
     public static String GetAddress(String domen) {
         try {
-            String API_KEY = "7dd1fcd5bbe12ddaa126cd17a6a1a1754345f2a27b07e3a8796ab34ac06ae951";
+            String API_KEY = "f4a9b7ea74da7108eee600b0e1276405ec4c5d276858306a8818723d13b8bdaa";
             String command = "SELECT NAME FROM COMPANY WHERE WEBSITE='" + domen + "'";
 //        String query = URLEncoder.encode("SELECT NAME FROM COMPANY WHERE WEBSITE='ucu.edu.ua'", StandardCharsets.UTF_8);
             String query = URLEncoder.encode(command, StandardCharsets.UTF_8);

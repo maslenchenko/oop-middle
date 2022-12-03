@@ -19,7 +19,7 @@ public class WriteDataBase {
 
 
             List<String[]> data = new ArrayList<String[]>();
-            data.add(new String[] {url, name, twitter, facebook, logo, icon, employees, address});
+            data.add(new String[] {name, twitter, facebook, logo, icon, employees, address, url});
             writer.writeAll(data);
 
             // closing writer connection

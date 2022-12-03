@@ -9,9 +9,12 @@ import java.io.IOException;
 public class FindWiki {
     public static String FindWikiArticle(String name, String name_company) throws IOException {
         try {
-            String url_wiki = "https://en.wikipedia.org/wiki/" + name_company;
+            String url_wiki = "https://en.wikipedia.org/wiki" + name_company;
             Document wiki = Jsoup.connect(url_wiki).get();
-            return url_wiki;
+            if (url_wiki.equals("https://en.wikipedia.org/wiki/null")){
+                throw new Exception();}
+            else{
+                return url_wiki;}
 
         }catch (Exception e) {
             try {

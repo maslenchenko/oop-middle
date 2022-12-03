@@ -24,7 +24,7 @@ public class ParseDataBase {
 
             // we are going to read data line by line
             while ((nextRecord = csvReader.readNext()) != null) {
-                if(nextRecord[0].equals(name)){
+                if(nextRecord[7].equals(name)){
                     JSONObject parsed_from_database = new JSONObject();
                     parsed_from_database.put("name", nextRecord[0]);
                     parsed_from_database.put("twitter", nextRecord[1]);

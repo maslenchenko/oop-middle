@@ -33,11 +33,13 @@ public class WebScraper {
 
 
         String mydata = url;
-        Pattern pattern = Pattern.compile("//(.*?)\\.(.*?)/");
-        Matcher matcher = pattern.matcher(mydata);
         String name_company = null;
+
+        Pattern pattern = Pattern.compile("/(.*?)\\.(.*?)");
+        Matcher matcher = pattern.matcher(mydata);
         if (matcher.find()) {
             name_company = matcher.group(1);
+//            System.out.println(name_company);
         }
         JSONObject result = ParseDataBase.DataBaseParser(url);
 
@@ -83,7 +85,7 @@ public class WebScraper {
             }
         }
         if(employees.equals("-1")){employees = "Not Found";}
-        if(address == "Not Found"){
+        if(address == "Not Found."){
             String address_pdl = PDLReader.GetAddress(domen);
             if(address_pdl != "Not Found"){address = address_pdl;}
         }
