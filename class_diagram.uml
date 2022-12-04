@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>D:/_c_o_d_e_/java_ucu/oop-middle-main/src/main/java</OriginalElement>
+  <nodes>
+    <node x="1107.1074560432123" y="278.1809685299769">com.webscraper.demo.parser.Parser</node>
+    <node x="968.4929958305095" y="159.48835640531763">com.webscraper.demo.parser.WebScraper</node>
+    <node x="789.5767062487018" y="322.37312251228116">com.webscraper.demo.parser.PDLReader</node>
+    <node x="1290.382896492699" y="149.83306918866185">com.webscraper.demo.parser.FindWiki</node>
+    <node x="149.07649394856264" y="121.56301036210755">com.webscraper.demo.DemoController</node>
+    <node x="298.46236762481067" y="355.24876353754127">com.webscraper.demo.DemoApplication</node>
+    <node x="789.5767062487018" y="-118.60018933532058">com.webscraper.demo.parser.ParseDataBase</node>
+    <node x="523.6545953101357" y="-138.02388449417077">com.webscraper.demo.Info</node>
+    <node x="1129.8949428589945" y="-48.61043872919822">com.webscraper.demo.parser.WriteDataBase</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.webscraper.demo.parser.WebScraper" target="com.webscraper.demo.parser.Parser" relationship="DEPENDENCY">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.webscraper.demo.parser.WebScraper" target="com.webscraper.demo.parser.WriteDataBase" relationship="DEPENDENCY">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.webscraper.demo.parser.WebScraper" target="com.webscraper.demo.parser.PDLReader" relationship="DEPENDENCY">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.webscraper.demo.parser.WebScraper" target="com.webscraper.demo.parser.ParseDataBase" relationship="DEPENDENCY">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.webscraper.demo.Info" target="com.webscraper.demo.parser.WebScraper" relationship="DEPENDENCY">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.webscraper.demo.parser.WebScraper" target="com.webscraper.demo.parser.FindWiki" relationship="DEPENDENCY">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.webscraper.demo.DemoController" target="com.webscraper.demo.Info" relationship="CREATE">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Balloons" zoom="0.5663186077643911" showDependencies="true" x="950.1308150529496" y="123.09999054462912" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
